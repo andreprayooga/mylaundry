@@ -15,6 +15,9 @@ return new class extends Migration
     {
         Schema::create('laundry_types', function (Blueprint $table) {
             $table->id();
+            $table->string('name'); //Regular Express Satuan
+            $table->string('finished')->nullable();
+            $table->string('price')->nullable();
             $table->timestamps();
         });
     }

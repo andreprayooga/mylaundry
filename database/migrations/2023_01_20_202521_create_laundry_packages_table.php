@@ -15,6 +15,9 @@ return new class extends Migration
     {
         Schema::create('laundry_packages', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('laundry_type_id');
+            $table->string('name')->nullable(); // Cuci Kering Cuci Setrika Setrika (Regular)
+            $table->string('price');
             $table->timestamps();
         });
     }
