@@ -39,12 +39,17 @@
 
 		{{-- Header --}}
 		@include('components._header')
-	
-			{{-- Main Content --}}
-			@yield('main')
-	
-		{{-- Footer --}}
-		@include('components._footer')
+
+    <div class="az-content pd-y-20 pd-lg-y-30 pd-xl-y-40">
+      <div class="container">
+
+        @include('components._sidebar')
+
+      {{-- Main Content --}}
+        @yield('main')
+
+      </div><!-- container -->
+    </div><!-- az-content -->
 
     {{-- Modal --}}
     @include('components._modal')

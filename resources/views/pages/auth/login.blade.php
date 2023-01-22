@@ -12,7 +12,7 @@
     <div class="az-signin-header">
       <h2>Welcome back!</h2>
       <h4>Please login to continue your session.</h4>
-  
+
     @if(session()->has('loginError'))
       <div class="alert alert-danger alert-dismissible fade show" role="alert">
         {{ session('loginError') }}
@@ -45,7 +45,7 @@
 
     <div class="az-signin-footer">
       <p><a href="">Forgot password?</a></p>
-      <p>Login as courier? <a href="#" data-toggle="modal" data-target="#loginCourierModal">Continue</a></p>
+      {{-- <p>Login as courier? <a href="#" data-toggle="modal" data-target="#loginCourierModal">Continue</a></p> --}}
     </div><!-- az-signin-footer -->
 
   </div><!-- az-column-signup -->

@@ -25,7 +25,6 @@ class LoginRequest extends FormRequest
     {
         return [
             'email' => 'required|email:dns',
-            'pin_access' => 'required',
             'password' => 'required'
         ];
     }

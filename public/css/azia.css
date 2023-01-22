@@ -9252,6 +9252,7 @@ body {
       @media (min-width: 992px) {
         .az-header-menu .nav-item > .nav-link .typcn {
           font-size: 18px;
+          align: center;
           margin-right: 7px; } }
       .az-header-menu .nav-item > .nav-link .typcn::before {
         width: auto; }
@@ -9704,7 +9705,7 @@ body {
     margin-bottom: 0; }
     @media (min-width: 576px) {
       .az-header-profile h6 {
-        font-size: 18px; } }
+        font-size: 16px; } }
   .az-header-profile span {
     display: block;
     font-size: 13px; }
