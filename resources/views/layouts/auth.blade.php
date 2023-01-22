@@ -32,6 +32,9 @@
     {{-- Authentication --}}
       @yield('main')
 
+      {{-- Modal --}}
+      @include('components._modal')
+
     <script src="{{ asset('library/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('library/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('library/ionicons/ionicons.js') }}"></script>

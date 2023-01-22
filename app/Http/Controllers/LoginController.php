@@ -15,23 +15,14 @@ class LoginController extends Controller
 
     public function authenticate(LoginRequest $request)
     {
-        $credentials = $request->getCredentials();
+        $credentials = $request->validated();
 
-        if(Auth::validate($credentials)):
-            return redirect()->to('/sign-in')
-                ->withErrors(trans('auth.failed'));
-        endif;
+        if(Auth::attempt($credentials)) {
+            $request->session()->regenerate();
+            return redirect()->intended('/dashboard');
+        }
 
-        $user = Auth::getProvider()->retrieveByCredentials($credentials);
-
-        Auth::login($user);
-
-        return $this->authenticated($request, $user);
-    }
-
-    protected function authenticated(Request $request, $user) 
-    {
-        return redirect()->intended('/dashboard');
+        return back()->with('loginError', 'Login failed!');
     }
 
     public function logout()
@@ -41,6 +32,6 @@ class LoginController extends Controller
         request()->session()->invalidate();
         request()->session()->regenerateToken();
 
-        return redirect('/sign-in');
+        return redirect('/login');
     }
 }

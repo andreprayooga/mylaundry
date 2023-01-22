@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CourierController;
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,10 +23,10 @@ Route::get('/dashboard', function () {
     return view('pages.dashboard');
 });
 
-Route::get('/sign-in', function () {
-    return view('pages.auth.login');
-});
+Route::get('/login', [LoginController::class, 'index']);
+Route::post('/login', [LoginController::class, 'authenticate']);
 
-Route::get('/sign-up', function () {
-    return view('pages.auth.register');
-});
+//Route::get('/sign-out', [LoginController::class, 'logout']);
+//Route::post('/sign-out', [LoginController::class, 'logout']);
+
+Route::post('/login-courier', [CourierController::class, 'authenticate']);

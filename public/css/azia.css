@@ -11575,14 +11575,14 @@ body {
 .az-signin-header h4 {
   font-weight: 400;
   color: #1c273c;
-  margin-bottom: 25px; }
+  margin-bottom: 50px; }
 
 .az-signin-header label {
   color: #7987a1; }
 
 .az-signin-header .form-control {
   color: #1c273c;
-  font-weight: 500;
+  font-weight: 400;
   border-width: 2px;
   border-color: #cdd4e0; }
   .az-signin-header .form-control:focus {
@@ -11665,7 +11665,7 @@ body {
   justify-content: space-between; }
   @media (min-width: 576px) {
     .az-column-signup {
-      padding: 80px;
+      padding: 75px;
       width: 500px; } }
   @media (min-width: 992px) {
     .az-column-signup {
